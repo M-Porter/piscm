@@ -28,8 +28,6 @@ To use your own aliases, disable the automatic aliases first. Set `PISCM_AUTO_AL
 set -gx PISCM_AUTO_ALIAS off
 ```
 
-The four shortcut functions stay available. Call them directly, or bind them to your own aliases.
-
 ## Available commands
 
 - `piscm_git_status_shortcuts`
