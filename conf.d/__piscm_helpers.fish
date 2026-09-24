@@ -22,12 +22,6 @@ function __piscm_unquote --argument-names path
     string replace -ra '\\\\(.)' '$1' -- "$inner"
 end
 
-# Return 0 (true) when the shortcut aliases and their completions are active,
-# i.e. PISCM_AUTO_ALIAS is not explicitly set to "off".
-function __piscm_auto_alias_active
-    test "$PISCM_AUTO_ALIAS" != "off"
-end
-
 # Print $target as a path relative to $base (both absolute).
 function __piscm_relative --argument-names base target
     set -l bp (string split / -- "$base")
