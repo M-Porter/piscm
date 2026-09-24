@@ -1,27 +1,43 @@
-# sea_breeze
+# piscm
 
-A fish plugin installable with [fisher](https://github.com/jorgebucaran/fisher).
+A fish shell implementation of https://github.com/scmbreeze/scm_breeze.
 
 ## Install
 
-```fish
-fisher install ./
-```
-
-Or from a git remote:
+Install with fisher:
 
 ```fish
-fisher install <owner>/sea_breeze
+fisher install M-Porter/piscm
 ```
 
-## Usage
+## Aliases
+
+The plugin defines these aliases automatically:
+
+- `gs` -> `piscm_git_status_shortcuts`
+- `gb` -> `piscm_git_branch_shortcuts`
+- `ga` -> `piscm_git_add_shortcuts`
+- `gco` -> `piscm_git_checkout_shortcuts`
+- `gc` -> `piscm_git_commit_shortcuts`
+
+## Disable the automatic aliases
+
+To use your own aliases, disable the automatic aliases first. Set `PISCM_AUTO_ALIAS` to `off` in your `config.fish`:
 
 ```fish
-sea_breeze
+set -gx PISCM_AUTO_ALIAS off
 ```
 
-## Structure
+The four shortcut functions stay available. Call them directly, or bind them to your own aliases.
 
-- `fish/functions/` auto-loaded functions
-- `fish/completions/` auto-loaded completions
-- `fish/conf.d/` auto-loaded config
+## Available commands
+
+- `piscm_git_status_shortcuts`
+- `piscm_git_branch_shortcuts`
+- `piscm_git_add_shortcuts`
+- `piscm_git_checkout_shortcuts`
+- `piscm_git_commit_shortcuts`
+
+## Whats with the name?
+
+A crappy play on words of the latin word for fish, piscis. Piscis. Piscm. Piscis. Piscm. Idk. 🧿👄🧿

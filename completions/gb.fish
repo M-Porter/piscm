@@ -1,0 +1,1 @@
+complete -c gb -f -n __piscm_auto_alias_active -a '(git for-each-ref --format="%(refname:short)" refs/heads 2>/dev/null)'

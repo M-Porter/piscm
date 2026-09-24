@@ -1,0 +1,2 @@
+complete -c gco -f -n __piscm_auto_alias_active -a '(__fish_complete_path)'
+complete -c gco -f -n __piscm_auto_alias_active -a '(git for-each-ref --format="%(refname:short)" refs/heads refs/remotes 2>/dev/null)'

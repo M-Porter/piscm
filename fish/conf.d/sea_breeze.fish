@@ -1,1 +1,0 @@
-set -gx SEA_BREEZE_VERSION "0.1.0"
