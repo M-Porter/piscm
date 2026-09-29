@@ -16,4 +16,6 @@ if test "$PISCM_AUTO_ALIAS" != "off"
     alias ga piscm_git_add_shortcuts
     alias gco piscm_git_checkout_shortcuts
     alias gc piscm_git_commit_shortcuts
+    alias gd piscm_git_diff_shortcuts
+    alias ge piscm_exec_expand_args
 end
