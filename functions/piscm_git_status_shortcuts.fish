@@ -2,10 +2,8 @@
 # Sets $e1, $e2, ... (PISCM_ENV_CHAR) to the absolute path of each listed file.
 # Optional single group filter: 1|staged, 2|unmerged, 3|unstaged, 4|untracked.
 function piscm_git_status_shortcuts
-    if not git rev-parse --show-toplevel >/dev/null 2>&1
-        echo -s (set_color red) 'Not a git repository (or any of the parent directories)' (set_color normal)
-        return 1
-    end
+    __piscm_require_repo; or return 1
+
     set -l project_root (git rev-parse --show-toplevel 2>/dev/null)
     set -l porcelain (git status --porcelain -b 2>/dev/null)
     set -l changes $porcelain[2..-1]

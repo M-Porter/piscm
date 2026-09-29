@@ -1,0 +1,1 @@
+complete -c ge -x -n __piscm_auto_alias_active -a '(__fish_complete_subcommand)'

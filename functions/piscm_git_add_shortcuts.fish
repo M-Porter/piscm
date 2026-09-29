@@ -1,10 +1,8 @@
 # git add with numbered shortcut expansion (e.g. `ga 2 4 5-7`).
 # With PISCM_AUTO_REMOVE=yes, deleted files are staged with git rm instead.
 function piscm_git_add_shortcuts
-    if not git rev-parse --show-toplevel >/dev/null 2>&1
-        echo -s (set_color red) 'Not a git repository (or any of the parent directories)' (set_color normal)
-        return 1
-    end
+    __piscm_require_repo; or return 1
+
     if test (count $argv) -eq 0
         echo 'Usage: ga <file>   => git add <file>'
         echo '       ga 1        => git add $e1'

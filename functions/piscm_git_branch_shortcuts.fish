@@ -2,10 +2,8 @@
 # Sets $e1, $e2, ... (PISCM_ENV_CHAR) to branch names.
 # Other args (e.g. -d, -m) pass through to git with shortcuts expanded.
 function piscm_git_branch_shortcuts
-    if not git rev-parse --show-toplevel >/dev/null 2>&1
-        echo -s (set_color red) 'Not a git repository (or any of the parent directories)' (set_color normal)
-        return 1
-    end
+    __piscm_require_repo; or return 1
+
     set -l is_all 0
     if test (count $argv) -eq 1; and test "$argv[1]" = '-a'
         set is_all 1
