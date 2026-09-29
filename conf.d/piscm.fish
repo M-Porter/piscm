@@ -1,5 +1,5 @@
 # piscm version
-set -gx PISCM_VERSION "1.0.0"
+set -gx PISCM_VERSION "1.1.0"
 
 # Git shortcut settings
 # Prefix character for shortcut variables, so shortcuts are stored as $e1, $e2, etc.
